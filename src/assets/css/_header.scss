@@ -1,0 +1,45 @@
+/*-------------------------------------------------------
+ header
+-------------------------------------------------------*/
+.header {
+	width: 100%;
+	&__inner {
+		width: 1000px;
+		height: 90px;
+		margin: 0 auto;
+		.header-id {
+			float: left;
+			width: 240px;
+			margin: 20px 0 0 0;
+			&.sp {
+				display: none;
+			}
+		}
+	}
+}
+
+@media only screen and (max-width: 1000px) {
+	.header {
+		.header__inner{
+			width: 100%;
+			.header-id {
+				margin: 20px 0 0 20px;
+			}
+		}
+	}
+}
+@media only screen and (max-width: 640px) {
+	.header {
+		.header__inner {
+			height: 60px;
+			.header-id {
+				display: none;
+				&.sp {
+					display: block;
+					width: 150px;
+					margin: 14px 0 0 15px;
+				}
+			}
+		}
+	}
+}

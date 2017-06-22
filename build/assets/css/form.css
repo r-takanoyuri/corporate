@@ -1,0 +1,57 @@
+@charset "UTF-8";
+/*
+#form
+下層用CSS
+
+*/
+.formContainer {
+  padding: 40px 0 20px;
+  background-color: #efefef; }
+  .formContainer > div {
+    width: 630px;
+    margin: 0 auto; }
+  .formContainer .formThanks > p {
+    color: #333333; }
+  .formContainer .formThanks > ul {
+    margin-left: 1em;
+    text-indent: -1em; }
+  .formContainer .bnrArea {
+    width: 855px; }
+    .formContainer .bnrArea ul {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex; }
+      .formContainer .bnrArea ul li {
+        width: 270px;
+        margin-left: 15px; }
+
+@media only screen and (max-width: 1000px) {
+  .formContainer .bnrArea {
+    width: auto;
+    margin: 30px 20px 0; }
+    .formContainer .bnrArea ul li {
+      width: 100%;
+      margin-left: 15px; }
+      .formContainer .bnrArea ul li img {
+        width: 100%;
+        height: auto; }
+      .formContainer .bnrArea ul li:first-child {
+        margin-left: 0; }
+  .formContainer .formThanks .size-large {
+    font-size: 18px;
+    font-size: 1.8rem; } }
+
+@media only screen and (max-width: 768px) {
+  .formContainer {
+    padding: 25px 0 20px; }
+    .formContainer .size-xxlarge {
+      font-size: 18px;
+      font-size: 1.8rem; }
+    .formContainer > div {
+      width: auto;
+      margin: 0 20px; }
+    .formContainer .bnrArea ul {
+      display: block; }
+      .formContainer .bnrArea ul li {
+        margin: 0 0 10px;
+        display: block; } }

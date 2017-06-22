@@ -1,0 +1,439 @@
+@charset "UTF-8";
+/*
+#overview
+ベースCSS
+
+*/
+
+
+/* Initialize
+   ========================================================================== */
+html, body, div, span, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, address, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp, small, strong, sub, sup, var,
+b, u, i,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup, main,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video, button {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+} 
+
+/* Display
+   ========================================================================== */
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section, main {
+  display: block;
+}
+
+html {
+  font-size: medium;
+}
+
+@keyframes fadeIn {
+    0% {opacity: 0}
+    100% {opacity: 1}
+}
+
+@-webkit-keyframes fadeIn {
+    0% {opacity: 0}
+    100% {opacity: 1}
+}
+
+/* Fonts
+   ========================================================================== */
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-size: 100%;
+  font-family: "游ゴシック", YuGothic, "メイリオ", Meiryo, "ヒラギノ角ゴ ProN W3", "Hiragino Kaku Gothic ProN", "ＭＳ Ｐゴシック", sans-serif;
+  -webkit-text-size-adjust: 100%;
+  background: url(../../assets/img/layout/line_blue.png) left 85px repeat-x;
+  background-size: 100% 5px;
+  animation: fadeIn 2s ease 0s 1 normal;
+  -webkit-animation: fadeIn 2s ease 0s 1 normal;
+}
+
+dt, dd, li, caption, th, td, col, h1, h2, h3, h4, h5, h6, p, address, figcaption, strong {
+  font-size: 15px;
+  font-size: 1.5rem;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Style
+   ========================================================================== */
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after, q:before, q:after {
+  content: '';
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+caption {
+  text-align: left;
+}
+
+th {
+  font-weight: bold;
+}
+
+th, td {
+  vertical-align: top;
+}
+
+input, select, textarea {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -ms-appearance: none;
+  appearance: none;
+  outline: none;
+  border: none;
+  width: 100%;
+  -webkit-tap-highlight-color: rgba(0,0,0,0);
+}
+
+label {
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
+}
+
+select::-ms-expand {
+    display: none;
+}
+
+*,
+*:after,
+*:before {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+input:focus, textarea:focus {
+  outline: none;
+}
+
+textarea {
+  resize: none;
+}
+
+img {
+  vertical-align: top;
+  -ms-interpolation-mode: bicubic;
+}
+
+em, strong {
+  font-style: normal;
+  font-weight: bold;
+}
+
+small {
+  font-size: 10px;
+  font-size: 1rem;
+}
+
+
+/* Root
+   ========================================================================== */
+html {
+  height: 100%;
+}
+
+body {
+  position: relative;
+  background-color: #ffffff;
+  color: #333333;
+  line-height: 1.7;
+}
+
+@media only screen and (max-width: 800px) {
+  body {
+    min-width: 0;
+  }
+}
+@media only screen and (max-width: 640px) {
+  body {
+    background: url(../../assets/img/layout/line_blue.png) left 55px repeat-x;
+    background-size: 100% 5px;
+  }
+}
+
+/* Container
+   ========================================================================== */
+.container {
+  overflow: hidden;
+  width: 1000px;
+  margin: 0 auto;
+}
+@media only screen and (max-width: 1000px) {
+  .container {
+    width: 100%;
+    margin: 0;
+  }
+}
+@media only screen and (max-width: 640px) {
+  .container {
+
+  }
+}
+.section {
+  position: relative;
+  width: 100%;
+}
+
+/* Overlay
+   ========================================================================== */
+.overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  z-index: 20;
+  width: 100%;
+  height: 100%;
+  margin-left: 615px;
+  background-color: #f1ece9;
+  content: '';
+}
+@media only screen and (max-width: 1000px) {
+  .overlay {
+    margin-left: 0;
+  }
+}
+
+
+/* Scroll top
+   ========================================================================== */
+.scroll-top {
+  height: 50px;
+  line-height: 50px;
+  color: #F2F2F2;
+  background-color: #123049;
+  font-size: 14px;
+  p {
+    position: relative;
+    max-width: 1000px;
+    min-width: 320px;
+    margin: 0 auto;
+    padding: 0 40px 0 20px;
+    cursor: pointer;
+    &:after {
+      position: absolute;
+      top: 50%;
+      right: 20px;
+      -webkit-transform: translateY(-50%);
+      -moz-transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
+      transform: translateY(-50%);
+      content: "∧";
+      width: 16px;
+      height: 11px;
+      margin-top: -20px;
+    }
+  }
+}
+@media only screen and (max-width: 640px) {
+  .scroll-top {
+    height: 40px;
+    line-height: 40px;
+    p {
+      &:after {
+        margin-top: -15px;
+      }
+    }
+  }
+}
+
+/* Link
+   ========================================================================== */
+a, a:link, a:visited, a:active {
+  color: #2266aa;
+  text-decoration: none; }
+
+a:hover {
+  opacity: 0.8;
+  transition: 0.2s;
+  text-decoration: underline; }
+
+/* Font size
+   ========================================================================== */
+.size-xsmall {
+  font-size: 10px;
+  font-size: 1rem;
+}
+
+.size-small {
+  font-size: 12px;
+  font-size: 1.2rem;
+}
+@media only screen and (min-width: 320px) {
+  .size-small {
+    font-size: 10px;
+    font-size: 1rem;
+  }
+}
+
+.size-medium {
+  font-size: 14px;
+  font-size: 1.4rem;
+}
+
+.size-large {
+  font-size: 20px;
+  font-size: 2rem;
+}
+
+.size-xlarge {
+  font-size: 24px;
+  font-size: 2.4rem;
+}
+
+.size-xxlarge {
+  font-size: 26px;
+  font-size: 2.6rem;
+}
+
+/* Break
+   ========================================================================== */
+.br {
+  padding-left: 10px;
+}
+@media only screen and (max-width: 640px) {
+  br.spHidden {
+    display: none;
+  }
+  .br:before {
+    content: "\A" ;
+    white-space: pre;
+    padding-left: 0;
+  }
+}
+
+/* Font weight
+   ========================================================================== */
+.fwn {
+  font-weight: normal !important;
+}
+
+.fwb {
+  font-weight: bold !important;
+}
+
+/* Font color
+   ========================================================================== */
+.def-color {
+  color: #333333;
+}
+
+
+/* Float
+   ========================================================================== */
+.fln {
+  float: none !important;
+}
+
+.fll {
+  float: left !important;
+}
+
+.flr {
+  float: right !important;
+}
+
+.clb {
+  clear: both !important;
+}
+
+.cll {
+  clear: left !important;
+}
+
+.clr {
+  clear: right !important;
+}
+
+
+/* Align
+   ========================================================================== */
+/* Horizontal */
+.tal {
+  text-align: left !important;
+}
+
+.tac {
+  text-align: center !important;
+}
+
+.tar {
+  text-align: right !important;
+}
+
+.taf {
+  text-align: justify;
+  text-justify: inter-ideograph;
+}
+
+/* Vertical */
+.vat {
+  vertical-align: top !important;
+}
+
+.vam {
+  vertical-align: middle !important;
+}
+
+.vab {
+  vertical-align: bottom !important;
+}
+
+.val {
+  vertical-align: baseline !important;
+}
+
+/* State
+  ========================================================================== */
+.dn {
+  display: none;
+}
+
+.db {
+  display: block;
+}
+
+.di {
+  display: inline;
+}
+
+.slh {
+  line-height: 1.3em;
+}
+
+/* Clearfix
+  ========================================================================== */
+.cf:after {
+  content: "";
+  display: block;
+  clear: both;
+}

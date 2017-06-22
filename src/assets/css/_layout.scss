@@ -1,0 +1,216 @@
+/*-------------------------------------------------------
+ layout
+-------------------------------------------------------*/
+.mainImg {
+	position: relative;
+	padding: 40px 0 25px 40px;
+	height: 343px;
+	background: url(../../assets/img/main_img.png) -1px top no-repeat;
+	background-size: 100% auto;
+	-webkit-background-size: 100% auto;
+	-moz-background-size: 100% auto;
+	-ms-background-size: 100% auto;
+	-o-background-size: 100% auto;
+	color: #003175;
+	.heading-title {
+		font-size: 30px;
+		font-size: 3rem;
+		font-weight: 600;
+		letter-spacing: 0.13em;
+		line-height: 1.4em;
+		span {
+			font-size: 34px;
+			font-size: 3.4rem;
+		}
+	}
+	.badge {
+		width: 215px;
+		position: absolute;
+		bottom: 20px;
+		right: 20px;
+		&.sp {
+			display: none;
+		}
+	}
+}
+
+.innerColumn {
+	position: relative;
+	margin: 20px 40px;
+    padding: 20px 40px;
+	background: url(../../assets/img/layout/img_cont_01.svg) 90% center no-repeat;
+    background-size: 200px 200px;
+    -webkit-background-size: 200px 200px;
+	-moz-background-size: 200px 200px;
+	-ms-background-size: 200px 200px;
+	-o-background-size: 200px 200px;
+	line-height: 1.6;
+	.backPinkLists {
+		width: 60%;
+		li {
+			line-height: initial;
+			text-indent: -1.3em;
+			margin-left: 1em;
+		}
+	}
+}
+
+.linkLists {
+	width: auto;
+	margin: 0 auto 20px;
+	text-align: center;
+	li {
+		display: inline-block;
+		margin: 0 1.5em;
+		padding-right: 15px;
+		background: url(../../assets/img/layout/icn_link.svg) right 50% no-repeat;
+		background-size: 10px 8px;
+	    -webkit-background-size: 10px 8px;
+		-moz-background-size: 10px 8px;
+		-ms-background-size: 10px 8px;
+		-o-background-size: 10px 8px;
+		font-size: 13px;
+		font-size: 1.3rem;
+	}
+}
+
+@media only screen and (max-width: 1000px) {
+	.mainImg {
+		padding: 40px 30% 25px 40px;
+		background-size: auto auto;
+		-webkit-background-size: auto auto;
+		-moz-background-size: auto auto;
+		-ms-background-size: auto auto;
+		-o-background-size: auto auto;
+		.heading-title {
+			font-size: 24px;
+			font-size: 2.4rem;
+			letter-spacing: 0.16em;
+			line-height: 1.4em;
+			span {
+				font-size: 24px;
+				font-size: 2.4rem;
+			}
+		}
+	}
+	.innerColumn {
+		margin: 20px 20px;
+		padding: 20px 20px;
+	}
+}
+
+@media only screen and (max-width: 768px) {
+	.mainImg {
+		padding: 20px 30% 25px 20px;
+		.badge {
+			width: 215px;
+		}
+	}
+	.innerColumn {
+		margin: 20px 20px;
+		padding: 15px 20px;
+		background-size: 200px;
+		-webkit-background-size: 200px 200px;
+		-moz-background-size: 200px 200px;
+		-ms-background-size: 200px 200px;
+		-o-background-size: 200px 200px;
+		background-position: 95% center;
+		.backPinkLists {
+			li {
+				font-size: 14px;
+				font-size: 1.4rem;
+			}
+		}
+		.back {
+			text-indent: -1.3em;
+			margin-left: 1em;
+			font-size: 14px;
+			font-size: 1.3rem;
+		}
+		.size-xlarge {
+			text-align: center;
+			font-size: 18px;
+			font-size: 1.8rem;
+		}
+	}
+}
+
+@media only screen and (max-width: 640px) {
+	.mainImg {
+		padding: 20px;
+		.heading-title {
+			font-size: 20px;
+			font-size: 2rem;
+			span {
+				font-size: 20px;
+				font-size: 2rem;
+			}
+		}
+		.badge {
+			display: none;
+			&.sp {
+				display: block;
+				width: 47%;
+				margin-top: 0;
+			}
+		}
+	}
+	.innerColumn {
+		padding: 0;
+		background: url(../../assets/img/layout/s_img_cont_01.svg) center center no-repeat;
+		background-size: 50% 50%;
+		-webkit-background-size: 50% 50%;
+		-moz-background-size: 50% 50%;
+		-ms-background-size: 50% 50%;
+		-o-background-size: 50% 50%;
+		background-position: center 30%;
+		.backPinkLists {
+			width: 100%;
+			padding-top: 55%;
+		}
+	}
+}
+
+@media only screen and (max-width: 480px) {
+	.mainImg {
+		padding: 20px;
+		.heading-title {
+			font-size: 16px;
+			font-size: 1.6rem;
+			span {
+				font-size: 16px;
+				font-size: 1.6rem;
+			}
+		}
+		.badge {
+			&.sp {
+				margin-top: 0;
+			}
+		}
+		.heading-text {
+			font-size: 13px;
+			font-size: 1.3rem;
+			line-height: 1.4;
+		}
+	}
+	.innerColumn {
+		background-position: center 15%;
+		.size-xlarge {
+			font-size: 14px;
+			font-size: 1.4rem;
+		}
+	}
+}
+
+@media only screen and (max-width: 320px) {
+	.mainImg {
+		padding: 20px;
+		.badge {
+			&.sp {
+				margin-top: 0;
+				bottom: 10px;
+				right: 10px;
+			}
+		}
+	}
+}

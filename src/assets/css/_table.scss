@@ -1,0 +1,17 @@
+/*-------------------------------------------------------
+ table
+-------------------------------------------------------*/
+.tableBox {
+	display: inline-block;
+	width: 47.2%;
+	vertical-align: top;
+	&:first-child {
+		padding-right: 5%;
+	}
+}
+@media only screen and (max-width: 640px) {
+	.tableBox {
+		display: inline;
+		width: 100%;
+	}
+}

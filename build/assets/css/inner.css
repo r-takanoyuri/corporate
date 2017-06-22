@@ -1,0 +1,47 @@
+@charset "UTF-8";
+/*
+#inner
+下層用CSS
+
+*/
+.innerContainer {
+  padding: 40px 0; }
+  .innerContainer p {
+    margin-bottom: 40px;
+    color: #333333; }
+  .innerContainer .otherPageLink {
+    position: relative;
+    padding-right: 15px; }
+    .innerContainer .otherPageLink:before {
+      position: absolute;
+      top: 3px;
+      right: 0;
+      width: 10px;
+      height: 8px;
+      background: url(../../assets/img/layout/icn_link.svg) 0 0 no-repeat;
+      content: ''; }
+
+.rowInnerList {
+  margin-bottom: 40px; }
+  .rowInnerList li {
+    text-indent: -1em;
+    margin-left: 1em;
+    color: #333333; }
+    .rowInnerList li.is-disable {
+      color: #cccccc; }
+  .rowInnerList.circle li {
+    list-style-type: circle;
+    text-indent: 0em;
+    margin-left: 2em; }
+
+@media only screen and (max-width: 1000px) {
+  .innerContainer {
+    margin: 0 20px;
+    padding: 20px 0; } }
+
+@media only screen and (max-width: 640px) {
+  .innerContainer .size-xxlarge {
+    font-size: 20px;
+    font-size: 2rem; }
+  .innerContainer .p_mark {
+    text-align: center; } }
